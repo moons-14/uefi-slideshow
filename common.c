@@ -15,7 +15,7 @@ void puts(unsigned short *str)
     ST->ConOut->OutputString(ST->ConOut, str);
 }
 
-void puth(unsigned long long val, unsigned char num_digits)
+void puth(UINTN val, unsigned char num_digits)
 {
     int i;
     unsigned short unicode_val;
@@ -39,7 +39,7 @@ void puth(unsigned long long val, unsigned char num_digits)
 unsigned short getc(void)
 {
     struct EFI_INPUT_KEY key;
-    unsigned long long waitidx;
+    UINTN waitidx;
 
     ST->BootServices->WaitForEvent(1, &(ST->ConIn->WaitForKey), &waitidx);
 
@@ -104,7 +104,7 @@ int strcmp(unsigned short *s1, unsigned short *s2)
     }
 }
 
-void strncpy(unsigned short *dst, unsigned short *src, unsigned long long n)
+void strncpy(unsigned short *dst, unsigned short *src, UINTN n)
 {
     while (n--)
     {
@@ -112,7 +112,7 @@ void strncpy(unsigned short *dst, unsigned short *src, unsigned long long n)
     }
 }
 
-unsigned char check_warn_error(unsigned long long status, unsigned short *message)
+unsigned char check_warn_error(EFI_STATUS status, unsigned short *message)
 {
     if (status)
     {
@@ -125,7 +125,7 @@ unsigned char check_warn_error(unsigned long long status, unsigned short *messag
     return !status;
 }
 
-void assert(unsigned long long status, unsigned short *message)
+void assert(EFI_STATUS status, unsigned short *message)
 {
     if (!check_warn_error(status, message))
         while (1)

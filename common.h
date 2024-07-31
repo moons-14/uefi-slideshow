@@ -9,11 +9,11 @@
 
 void putc(unsigned short c);
 void puts(unsigned short *s);
-void puth(unsigned long long val, unsigned char num_digits);
+void puth(UINTN val, unsigned char num_digits);
 unsigned short getc(void);
 unsigned int gets(unsigned short *buf, unsigned int buf_size);
 int strcmp(unsigned short *s1, unsigned short *s2);
-void strncpy(unsigned short *dst, unsigned short *src, unsigned long long n);
-void assert(unsigned long long status, unsigned short *message);
+void strncpy(unsigned short *dst, unsigned short *src, UINTN n);
+void assert(EFI_STATUS status, unsigned short *message);
 
 #endif

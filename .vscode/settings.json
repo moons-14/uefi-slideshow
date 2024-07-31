@@ -2,6 +2,8 @@
     "files.associations": {
         "slideshow.h": "c",
         "graphics.h": "c",
-        "efi.h": "c"
+        "efi.h": "c",
+        "compare": "c",
+        "common.h": "c"
     }
 }
