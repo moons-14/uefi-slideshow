@@ -7,4 +7,7 @@ void efi_main(void *ImageHandle __attribute__((unused)), struct EFI_SYSTEM_TABLE
     efi_init(SystemTable);
 
     draw();
+
+    while (1)
+        ;
 }

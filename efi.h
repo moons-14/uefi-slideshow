@@ -4,6 +4,10 @@
 typedef unsigned long long EFI_STATUS;
 typedef unsigned long long UINTN;
 
+#define EFI_SUCCESS
+#define EFI_ERROR
+#define EFI_UNSUPPORTED
+
 struct EFI_INPUT_KEY
 {
     unsigned short ScanCode;

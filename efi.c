@@ -5,6 +5,10 @@ struct EFI_SYSTEM_TABLE *ST;
 struct EFI_GRAPHICS_OUTPUT_PROTOCOL *GOP;
 struct EFI_SIMPLE_FILE_SYSTEM_PROTOCOL *SFSP;
 
+#define EFI_SUCCESS 0
+#define EFI_ERROR 1
+#define EFI_UNSUPPORTED 26
+
 void efi_init(struct EFI_SYSTEM_TABLE *SystemTable)
 {
     struct EFI_GUID gop_guid = {0x9042a9de, 0x23dc, 0x4a38, {0x96, 0xfb, 0x7a, 0xde, 0xd0, 0x80, 0x51, 0x6a}};
