@@ -1,3 +1,7 @@
 {
-    "files.associations": {}
+    "files.associations": {
+        "slideshow.h": "c",
+        "graphics.h": "c",
+        "efi.h": "c"
+    }
 }
