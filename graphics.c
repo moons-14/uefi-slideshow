@@ -83,8 +83,8 @@ void draw(void)
     }
 
     // メモリ開放
-    // status = ST->BootServices->FreePool(image.data);
-    // assert(status, L"FreePool");
+    status = ST->BootServices->FreePool(image.data);
+    assert(status, L"FreePool");
 
     while (1)
         ;
